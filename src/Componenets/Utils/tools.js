@@ -33,6 +33,32 @@ export const showSuccessToast = (msg) => {
     })
 }
 
+export const Tag = ( props)=> {
+    const Template = <div
+        style={{
+            background : props.bck ? props.bck : '#ffffff' ,
+            fontSize : props.size ? props.size : '15px',
+            color: props.color ? props.color : '#000000',
+            padding: '5px 10px',
+            display: 'inline-block',
+            fontFamily: 'Righteous',
+            ...props.add
+        }}
+    >
+        {props.children}
+    </div>;
+
+    if(props.link){
+        return <Link className="link_logo" to={props.linkTo}>
+                    {Template}
+                </Link>
+    }
+    else{
+        return Template
+    }
+
+}
+
 export const showErrorToast = (msg) => {
     toast.error(msg,{
         position: "bottom-right",

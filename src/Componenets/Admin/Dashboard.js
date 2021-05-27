@@ -1,5 +1,4 @@
 import React from 'react';
-import AuthHOC from '../HOC/AuthHOC';
 import AdminLayout from '../HOC/AdminLayout';
 
 const Dashboard = (props) => {
@@ -9,7 +8,7 @@ const Dashboard = (props) => {
             <div className="user_dashboard">
                 <div>
                     This is your dashboard
-                </div>    
+                </div>
 
             </div>
 
@@ -17,4 +16,4 @@ const Dashboard = (props) => {
     );
 };
 
-export default AuthHOC(Dashboard);
+export default Dashboard;
