@@ -388,6 +388,7 @@ footer .footer_discl {
 
 .home_meetplayers { 
     background: #ffffff;
+    background-image: url('../images/stripes.png');
 }
 
 .home_meetplayers_wrapper {
@@ -643,6 +644,7 @@ footer .footer_discl {
     padding: 20px;
     background-size: 5px 5px !important;
     min-height:100vh;
+    background-image: url('../images/stripes.png');
 }
 
 .team_category_wrapper .title {

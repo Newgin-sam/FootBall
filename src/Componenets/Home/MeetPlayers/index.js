@@ -33,9 +33,7 @@ const MeetPlayers = () => {
             }}
             triggerOnce
         >
-            <div className="home_meetplayers"
-                style={{ background: `#ffffff url(${Stripes})` }}
-            >
+            <div className="home_meetplayers">
                 <div className="container">
                     <div className="home_meetplayers_wrapper">
                         <div className="home_card_wrapper">
