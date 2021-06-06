@@ -112,13 +112,17 @@ const AdminMatches = () => {
                                         </Link>
                                     </TableCell>
                                     <TableCell>
-                                        {match.resultAway} <strong>-</strong> {match.resultLocal}
+                                        {match.final === "yes" ?
+                                            <>{match.resultAway} <strong>-</strong> {match.resultLocal}</>
+                                            :
+                                            <span className="matches_tag_red">N/A</span>
+                                        }
                                     </TableCell>
                                     <TableCell>
-                                        {match.final === "Yes" ?
-                                            <span className="matches_tag_red">Final</span>
+                                        {match.final === "yes" ?
+                                            <span className="matches_tag_green">Final</span>
                                             :
-                                            <span className="matches_tag_green">Not played yet</span>
+                                            <span className="matches_tag_red">Not played yet</span>
                                         }
                                     </TableCell>
                                 </TableRow>
