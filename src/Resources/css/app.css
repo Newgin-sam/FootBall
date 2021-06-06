@@ -122,6 +122,7 @@ button {
     color: #ffffff;
     border: 1px solid white;
     padding: 10px;
+    cursor: pointer;
 }
 
 .not_found_container {
@@ -567,10 +568,20 @@ footer .footer_discl {
     background: #282828;
     color: whitesmoke;
     border-right: 2px solid #01285e;
+    padding: .5rem;
+}
+.admin_nav_link{
+    border-bottom: 1px solid #f5f5f53b !important;
+    margin-top: .25rem !important;
+    transition: all .5s;
+}
+.admin_nav_link:hover{
+    border-bottom: 2px solid #f5f5f53b !important;
 }
 
 .admin_container  .admin_right {
     flex-grow: 1;
+    margin: 1rem;
 }
 .admin_container  .admin_progress {
     text-align: center;
@@ -683,4 +694,7 @@ footer .footer_discl {
     color: #d5ebfe;
     text-align: center;
     margin-top: 200px;
+}
+.mb-5{
+    margin-bottom: .5rem;
 }
