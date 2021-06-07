@@ -14,6 +14,7 @@ import TheTeam from './Componenets/TheTeam';
 import AdminMatches from './Componenets/Admin/Matches';
 import AddEditMatch from './Componenets/Admin/Matches/AddEditMatch';
 import TheMatches from './Componenets/TheMatches';
+import NotFound from './Componenets/NotFound';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -25,22 +26,37 @@ const Routes = ({ user }) => {
 
       <Switch>
 
+        <Route path='/admin_players/edit_player/:playerid' component={AuthHOC(AddEditPlayers)} />
+
+        <Route path='/admin_players/add_player' component={AuthHOC(AddEditPlayers)} />
+
+        <Route path='/admin_players' component={AuthHOC(AdminPlayers)} />
+
+
+        <Route path='/admin_matches/edit_match/:matchid' component={AuthHOC(AddEditMatch)} />
+
+        <Route path='/admin_matches/add_match' component={AuthHOC(AddEditMatch)} />
+
+        <Route path='/admin_matches' component={AuthHOC(AdminMatches)} />
+
+
+
+        <Route path='/the_team' component={TheTeam} />
+
+        <Route path='/the_matches' component={TheMatches} />
+
+        <Route path='/dashboard' component={AuthHOC(Dashboard)} />
+
+        <Route path='/sign-in' component={(props) => <SigIn {...props} user={user} />} />
+
         <Route path='/' exact component={Home} />
-        <Route path='/admin_players' exact component={AuthHOC(AdminPlayers)} />
-        <Route path='/admin_players/add_player' exact component={AuthHOC(AddEditPlayers)} />
-        <Route path='/admin_players/edit_player/:playerid' exact component={AuthHOC(AddEditPlayers)} />
-        <Route path='/admin_matches' exact component={AuthHOC(AdminMatches)} />
-        <Route path='/admin_matches/add_match' exact component={AuthHOC(AddEditMatch)} />
-        <Route path='/admin_matches/edit_match/:matchid' exact component={AuthHOC(AddEditMatch)} />
-        <Route path='/the_team' exact component={TheTeam} />
-        <Route path='/the_matches' exact component={TheMatches} />
-        <Route path='/dashboard' exact component={AuthHOC(Dashboard)} />
-        <Route path='/sign-in' exact component={(props) => <SigIn {...props} user={user} />} />
+
+
+        <Route component={NotFound} />
 
       </Switch>
 
       <ToastContainer />
-
       <Footer />
 
     </BrowserRouter>
