@@ -15,7 +15,7 @@ const LeagueTable = () => {
 
     useEffect(() => {
         if (!positions) {
-            positionsCollection.get().then(snapshot => {
+            positionsCollection.orderBy('pts', 'desc').get().then(snapshot => {
                 const positions = snapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()
