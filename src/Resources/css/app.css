@@ -538,7 +538,9 @@ footer .footer_discl {
 
 .league_table_wrapper {
     border-left: 1px solid #98c6e9;
+    background-color: #dff1ff;
 }
+
 .league_table_wrapper .title {
     padding: 22px;
     font-size: 22px;

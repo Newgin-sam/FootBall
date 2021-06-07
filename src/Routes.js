@@ -13,6 +13,7 @@ import AuthHOC from './Componenets/HOC/AuthHOC';
 import TheTeam from './Componenets/TheTeam';
 import AdminMatches from './Componenets/Admin/Matches';
 import AddEditMatch from './Componenets/Admin/Matches/AddEditMatch';
+import TheMatches from './Componenets/TheMatches';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,6 +33,7 @@ const Routes = ({ user }) => {
         <Route path='/admin_matches/add_match' exact component={AuthHOC(AddEditMatch)} />
         <Route path='/admin_matches/edit_match/:matchid' exact component={AuthHOC(AddEditMatch)} />
         <Route path='/the_team' exact component={TheTeam} />
+        <Route path='/the_matches' exact component={TheMatches} />
         <Route path='/dashboard' exact component={AuthHOC(Dashboard)} />
         <Route path='/sign-in' exact component={(props) => <SigIn {...props} user={user} />} />
 
